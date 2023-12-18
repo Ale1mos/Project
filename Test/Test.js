@@ -58,4 +58,9 @@ const {Builder, By, Key} = require('selenium-webdriver');
     await driver.findElement(By.id('remove-test.allthethings()-t-shirt-(red)')).click();
     await driver.sleep(3000);
     await driver.findElement(By.css('#checkout')).click();
+
+    // CUARTA VISTA / Checkout-step-one
+    await driver.findElement(By.id('first-name')).sendKeys('Alejandra');
+    await driver.findElement(By.id('last-name')).sendKeys('Mosqueira');
+    await driver.sleep(2000);
 })();
