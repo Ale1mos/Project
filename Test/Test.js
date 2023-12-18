@@ -51,4 +51,11 @@ const {Builder, By, Key} = require('selenium-webdriver');
     await driver.sleep(2000);
     // Click in cart
     await driver.findElement(By.className('shopping_cart_link')).click();
+
+    // TERCERA VISTA / Cart
+    const fourScroll = await driver.findElement(By.className("footer"));
+    await driver.actions().move({ origin: fourScroll }).perform();
+    await driver.findElement(By.id('remove-test.allthethings()-t-shirt-(red)')).click();
+    await driver.sleep(3000);
+    await driver.findElement(By.css('#checkout')).click();
 })();
