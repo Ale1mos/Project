@@ -26,4 +26,8 @@ const {Builder, By, Key} = require('selenium-webdriver');
     await driver.sleep(8000)
 
     await driver.executeScript('console.log("2");');
+
+    // Añadir 1er elemento
+    await driver.findElement(By.id('add-to-cart-sauce-labs-backpack')).click();
+    await driver.sleep(2000);
 })();
