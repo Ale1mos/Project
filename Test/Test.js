@@ -65,4 +65,10 @@ const {Builder, By, Key} = require('selenium-webdriver');
     await driver.sleep(1000);
     await driver.findElement(By.css('#postal-code')).sendKeys(1);
     await driver.findElement(By.id('continue')).click();
+
+    // QUINTA VISTA / Checkout-step-two
+    await driver.findElement(By.name('finish')).click();
+    await driver.sleep(2000);
+
+
 })();
