@@ -62,7 +62,7 @@ const {Builder, By, Key} = require('selenium-webdriver');
     // CUARTA VISTA / Checkout-step-one
     await driver.findElement(By.id('first-name')).sendKeys('Alejandra');
     await driver.findElement(By.id('last-name')).sendKeys('Mosqueira');
-    await driver.sleep(2000);
+    await driver.sleep(1000);
     await driver.findElement(By.css('#postal-code')).sendKeys(1);
     await driver.findElement(By.id('continue')).click();
 })();
