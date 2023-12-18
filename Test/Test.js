@@ -24,7 +24,7 @@ const {Builder, By, Key} = require('selenium-webdriver');
 
     // Simular tecla Enter para seleccionar la opción
     await dropdownElement.sendKeys(Key.ENTER);
-    await driver.sleep(8000)
+    await driver.sleep(2000)
 
     await driver.executeScript('console.log("2");');
 
