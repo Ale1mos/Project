@@ -44,4 +44,8 @@ const {Builder, By, Key} = require('selenium-webdriver');
     // Add 3er product
     await driver.findElement(By.id('add-to-cart-sauce-labs-bolt-t-shirt')).click();
     await driver.sleep(2000);
+    // 3er Scroll
+    const threeScroll = await driver.findElement(By.className("shopping_cart_link"));
+    await driver.actions().move({ origin: threeScroll }).perform();
+    await driver.sleep(2000);
 })();
