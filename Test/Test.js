@@ -70,5 +70,6 @@ const {Builder, By, Key} = require('selenium-webdriver');
     await driver.findElement(By.name('finish')).click();
     await driver.sleep(2000);
 
-
+    // SEXTA VISTA / Checkout complete
+    await driver.findElement(By.id('back-to-products')).click();
 })();
