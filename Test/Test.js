@@ -48,4 +48,6 @@ const {Builder, By, Key} = require('selenium-webdriver');
     const threeScroll = await driver.findElement(By.className("shopping_cart_link"));
     await driver.actions().move({ origin: threeScroll }).perform();
     await driver.sleep(2000);
+    // Click in cart
+    await driver.findElement(By.className('shopping_cart_link')).click();
 })();
