@@ -64,5 +64,5 @@ const {Builder, By, Key} = require('selenium-webdriver');
     await driver.findElement(By.id('last-name')).sendKeys('Mosqueira');
     await driver.sleep(2000);
     await driver.findElement(By.css('#postal-code')).sendKeys(1);
-
+    await driver.findElement(By.id('continue')).click();
 })();
