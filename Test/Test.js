@@ -34,7 +34,10 @@ const {Builder, By, Key} = require('selenium-webdriver');
     const oneScroll = await driver.findElement(By.className("footer"));
     await driver.actions().move({ origin: oneScroll }).perform();
     await driver.sleep(2000);
-    // Add 2do producto
+    // Add 2do product
     await driver.findElement(By.id('add-to-cart-test.allthethings()-t-shirt-(red)')).click();
+    await driver.sleep(2000);
+    // Add 3er product
+    await driver.findElement(By.id('add-to-cart-sauce-labs-bolt-t-shirt')).click();
     await driver.sleep(2000);
 })();
