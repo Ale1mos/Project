@@ -30,4 +30,8 @@ const {Builder, By, Key} = require('selenium-webdriver');
     // Añadir 1er elemento
     await driver.findElement(By.id('add-to-cart-sauce-labs-backpack')).click();
     await driver.sleep(2000);
+    // 1er Scroll
+    const oneScroll = await driver.findElement(By.className("footer"));
+    await driver.actions().move({ origin: oneScroll }).perform();
+    await driver.sleep(2000);
 })();
