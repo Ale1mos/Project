@@ -13,9 +13,10 @@ const {Builder, By, Key} = require('selenium-webdriver');
     await driver.findElement(By.css('[data-test="login-button"]')).click();
     await driver.executeScript('console.log("1");');
 
+    // SEGUNDA VISTA / Inventory
     const dropdownElement = await driver.findElement(By.className('product_sort_container'));
 
-    // Hacer clic en la lista desplegable para abrirla
+    // Hacer click en la lista desplegable para abrirla
     await dropdownElement.click();
 
     // Simular teclas de flecha hacia abajo para navegar a la segunda opción
